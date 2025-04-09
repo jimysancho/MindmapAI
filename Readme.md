@@ -288,6 +288,6 @@ async def _create_mind_map_of_book(self, path: str) -> Tuple[MindMapCreatorInfo,
 
 ### 4. Examples
 
-- Regular book: [main.ipynb] (https://github.com/jimysancho/MindmapAI/blob/main/main.ipynb)
+- Regular book: [main.ipynb](https://github.com/jimysancho/MindmapAI/blob/main/main.ipynb)
 
-- No Index book: [no_index_book.ipynb] (https://github.com/jimysancho/MindmapAI/blob/main/no_index_book.ipynb)
+- No Index book: [no_index_book.ipynb](https://github.com/jimysancho/MindmapAI/blob/main/no_index_book.ipynb)
