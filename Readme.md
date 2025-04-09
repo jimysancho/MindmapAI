@@ -4,6 +4,11 @@ I have a really bad memory when it comes to books. I often need to re-read lots 
 
 The mindmaps that result from this application, are structured respecting the original structure of the book. Each chapter will have its own features, its own role in the book, so every chapter contribute to the final mindmap. Images will be interpreted as well during the text extraction from the pdf.
 
+The output will be a markdown-type of text. If you insert this output text in an app like **Obsidian** with the mindmap extension enable you'll see the mindmap. 
+
+![Mind Map Example](assets/mindmap-image.png)
+
+ 
 ## Table of Contents
 
 - [How are these mindmaps created?](#how-are-these-mindmaps-created?)
