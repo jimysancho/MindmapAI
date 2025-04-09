@@ -1,0 +1,10 @@
+openai
+docling
+torch
+torchvision
+boto3
+pydantic
+pymupdf
+passlib
+psycopg2-binary
+tiktoken
