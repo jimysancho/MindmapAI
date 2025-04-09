@@ -33,25 +33,25 @@ I will use an agentic workflow in order to create them (*with no frameworks... y
 
 ```python
 try:
-        self._indexer = Indexer(indexer_config=indexer_config)
-        self._summarizer = AgentSummarizer(config=summarizer_config)
-        self._mind_map_creator = MindMapCreatorAgent(config=mind_map_config)
-        self._quote_extractor = QuoteExtractorAgent(config=quote_extractor_config)
-    except Exception as e:
-        logger.error(f"Could not initialize some agent -> {e}")
-        raise e
+    self._indexer = Indexer(indexer_config=indexer_config)
+    self._summarizer = AgentSummarizer(config=summarizer_config)
+    self._mind_map_creator = MindMapCreatorAgent(config=mind_map_config)
+    self._quote_extractor = QuoteExtractorAgent(config=quote_extractor_config)
+except Exception as e:
+    logger.error(f"Could not initialize some agent -> {e}")
+    raise e
 
-    try:
-        indexer_info: IndexerInfo = await self._indexer.arun()
-        logger.info(f"Indexer finished for book: {path}")
-        summarizer_info, quote_extraction_info = await self._summarize_quote_extraction_in_paralel(indexer_info=indexer_info)
-        logger.info(f"Summarizer and Quote Extraction finished for book: {path}")
-        mind_map_info: MindMapCreatorInfo = await self._mind_map_creator.arun(summarizer_info)
-        logger.info(f"MindMapCreator finished for book: {path}")
-        mind_map_info.update_mind_map(quotes=quote_extraction_info)
-    except Exception as e:
-        logger.error(f"Error -> {e}")
-        raise e
+try:
+    indexer_info: IndexerInfo = await self._indexer.arun()
+    logger.info(f"Indexer finished for book: {path}")
+    summarizer_info, quote_extraction_info = await self._summarize_quote_extraction_in_paralel(indexer_info=indexer_info)
+    logger.info(f"Summarizer and Quote Extraction finished for book: {path}")
+    mind_map_info: MindMapCreatorInfo = await self._mind_map_creator.arun(summarizer_info)
+    logger.info(f"MindMapCreator finished for book: {path}")
+    mind_map_info.update_mind_map(quotes=quote_extraction_info)
+except Exception as e:
+    logger.error(f"Error -> {e}")
+    raise e
 ```
 
 Let's deep dive in each of them. 
