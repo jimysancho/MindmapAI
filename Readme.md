@@ -4,6 +4,13 @@ I have a really bad memory when it comes to books. I often need to re-read lots 
 
 The mindmaps that result from this application, are structured respecting the original structure of the book. Each chapter will have its own features, its own role in the book, so every chapter contribute to the final mindmap. Images will be interpreted as well during the text extraction from the pdf.
 
+## Table of Contents
+
+- [How are these mindmaps created?](#how-are-these-mindmaps-created?)
+- [Indexer](#1-indexer)
+- [Summarizer, Quote Extraction and MindMapCreator](#2-summarizer-quote-extraction-and-mindmapcreator)
+- [Pipeline](#3-pipeline-model)
+- [Examples](#4-examples)
 
 ## How are these mindmaps created?
 
